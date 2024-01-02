@@ -1,3 +1,4 @@
+
 function getComputerChoice(){
     let x = Math.floor(Math.random() * 3);
         if (x==0){
@@ -37,14 +38,12 @@ function game(){
     let i = 1;
 
         for (i=1 ; i<6; i++){
-            let r=playRound(prompt("Pick: Rock, Paper or Scissors!"), getComputerChoice());
+            let r=playRound(prompt("Pick: Rock, Paper or Scissors! (Round" + i + ")"), getComputerChoice());
             if (r == "YOU WIN!"){
                 pScore++;
-                console.log("Runda " + i +":");
                 console.log("You: " + pScore + " Computer: " + cScore);
             }else if (r == "YOU LOSE!"){
                 cScore++;
-                console.log("Runda " + i +":");
                 console.log("You: " + pScore + " Computer: " + cScore);
             }else if (r == "TIE! ...try again!"){
                 console.log("TIE! ...try again!");
@@ -58,7 +57,6 @@ function game(){
                 return "YOU LOOSE";
                 break
             }
-            
         }
 }
 console.log(game());
