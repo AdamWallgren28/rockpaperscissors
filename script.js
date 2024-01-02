@@ -31,6 +31,34 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
-const playerSelection = prompt("Pick: Rock, Paper or Scissors!");
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
+function game(){
+    let pScore = 0;
+    let cScore = 0;
+    let i = 1;
+
+        for (i=1 ; i<6; i++){
+            let r=playRound(prompt("Pick: Rock, Paper or Scissors!"), getComputerChoice());
+            if (r == "YOU WIN!"){
+                pScore++;
+                console.log("Runda " + i +":");
+                console.log("You: " + pScore + " Computer: " + cScore);
+            }else if (r == "YOU LOSE!"){
+                cScore++;
+                console.log("Runda " + i +":");
+                console.log("You: " + pScore + " Computer: " + cScore);
+            }else if (r == "TIE! ...try again!"){
+                console.log("TIE! ...try again!");
+                i--;
+            }
+            
+            if (pScore == 3){
+                console.log("YOU WIN!");
+                break
+            }else if (cScore == 3) {
+                console.log("YOU LOOSE");
+                break
+            }
+            
+        }
+}
+game();
