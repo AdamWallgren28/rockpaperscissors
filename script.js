@@ -52,13 +52,13 @@ function game(){
             }
             
             if (pScore == 3){
-                console.log("YOU WIN!");
+                return "YOU WIN!";
                 break
             }else if (cScore == 3) {
-                console.log("YOU LOOSE");
+                return "YOU LOOSE";
                 break
             }
             
         }
 }
-game();
+console.log(game());
