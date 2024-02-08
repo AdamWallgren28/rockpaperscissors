@@ -6,12 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    
+    <script src="script.js" defer></script>
+
 </head>
 <body>
-    <p>Press F12 to open console and see results.</p>
-    <p>Press F5 to reload and play again.</p>
-    <script src="script.js"></script>
+    <header>
+        
+        <h1>ROCK / PAPER / SCISSORS</h1>
+        
+    </header>
+    <main>
+        <div>
+            <button id="rockBtn">Rock</button>
+            <button id="paperBtn">Paper</button>
+            <button id="scissorBtn">Scissors</button>
+        </div>
+        <div class="roundGrid">
+            <p id="roundResult"></p>
+        </div>
+        <div class="scoreBoard">
+            <div class=player><p>PLAYER</p></div>
+            <div class=score>
+                <p id="playerScore">0</p><p> - </p>
+                <p id="compScore">0</p>
+            </div>
+            <div class=computer><p>COMPUTER</p></div>
+        </div>
+        <h1 id="winner"></h1>
+        <button id="newGameBtn">New Game</button>
+    </main>
+    <footer>
+        <p><em>End of website</em></p>
+        <button>Home</button>
+    </footer>
   
 </body>
 </html>
