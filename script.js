@@ -13,7 +13,6 @@ let playerScore = document.querySelector('#playerScore');
 let compScore = document.querySelector('#compScore');
 let winner = document.querySelector('#winner');
 
-
 // Generera datorns val
 function getComputerChoice(){
     let x = Math.floor(Math.random() * 3);
@@ -46,31 +45,31 @@ function playRound(playerSelection, computerSelection){
         }
 }
 
-// Knappfunktioner (per omgång)
+// Spelknappar
 rockBtn.addEventListener('click', function () {
     roundResult.textContent = '';
     setTimeout(function() {
         roundResult.textContent = playRound('rock', getComputerChoice());
-        game();
-
+        gameOf5();
     }, 50);
 });
 paperBtn.addEventListener('click', function () {
     roundResult.textContent = '';
     setTimeout(function() {
         roundResult.textContent = playRound('paper', getComputerChoice());
-        game();
+        gameOf5();
     }, 50);
 });
 scissorBtn.addEventListener('click', function () {
     roundResult.textContent = '';
     setTimeout(function() {
         roundResult.textContent = playRound('scissors', getComputerChoice());
-        game();
+        gameOf5();
     }, 50);
 });
 
 
+// Stänger av spelknappar
 function disableButtons() {
     rockBtn.disabled = true;
     paperBtn.disabled = true;
@@ -79,7 +78,7 @@ function disableButtons() {
 }
 
 // Bäst av 5
-function game() {
+function gameOf5() {
     let resultText = roundResult.textContent;
     if (resultText == "YOU WIN!") {
         pScore++;
@@ -98,7 +97,7 @@ function game() {
     } 
 }
 
-
+// ResetKnapp
 function resetGame() {
     location.reload();
 }
