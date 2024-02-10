@@ -83,7 +83,7 @@ function gameOf5() {
     if (resultText == "YOU WIN!") {
         pScore++;
         playerScore.textContent = pScore;
-    } else if (resultText == "YOU LOSE!") {
+    } else if (resultText == "YOU LOST!") {
         cScore++;
         compScore.textContent = cScore;
     }
@@ -92,7 +92,7 @@ function gameOf5() {
         winner.textContent = "YOU WON!";
         disableButtons();
     } else if (cScore === 3) {
-        winner.textContent = "YOU LOST...";
+        winner.textContent = "YOU LOST!";
         disableButtons();
     } 
 }

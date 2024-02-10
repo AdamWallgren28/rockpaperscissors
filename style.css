@@ -2,6 +2,7 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
+    font-family:'Courier New', Courier, monospace;
 }
 
 header {
@@ -9,9 +10,10 @@ header {
     background-color: aquamarine;
 }
 
-    h1 {display: inline;}
+    
 
 header, footer, main {
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,10 +24,11 @@ main {
 height: 65vh;
 background-color: peachpuff;
 }
-
+  
 
     .roundGrid {
         height: 10vh;
+       
     }
 
         #rockBtn, #paperBtn, #scissorBtn, #newGameBtn {
@@ -33,10 +36,11 @@ background-color: peachpuff;
             height: 2rem;
             border-radius: 1rem;
             background-color: aquamarine;
+            
         }
 
-    .scoreBoard {
-        width: 60vw;
+    .scoreBoard, .knappBox {
+        width: 20rem;
         display: flex;
         justify-content: space-evenly;
     }
@@ -47,8 +51,22 @@ background-color: peachpuff;
     align-items: center;
         }
 
+        .score {
+            justify-content: space-evenly;
+        }
+            
+    .vinnare {
+        height: 6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     #winner {
-        height: 2rem;
+        animation: fontPulse 2s infinite;
+    }
+    @keyframes fontPulse {
+      50% {font-size: 500%;}       
     }
 
     #newGameBtn {
