@@ -9,6 +9,8 @@ header {
     background-color: aquamarine;
 }
 
+    h1 {display: inline;}
+
 header, footer, main {
     display: flex;
     justify-content: center;
@@ -20,9 +22,18 @@ main {
 height: 65vh;
 background-color: peachpuff;
 }
+
+
     .roundGrid {
-        height: 10vh
+        height: 10vh;
     }
+
+        #rockBtn, #paperBtn, #scissorBtn, #newGameBtn {
+            width: 6rem;
+            height: 2rem;
+            border-radius: 1rem;
+            background-color: aquamarine;
+        }
 
     .scoreBoard {
         width: 60vw;

@@ -4,6 +4,9 @@ let rockBtn = document.querySelector('#rockBtn');
 let paperBtn = document.querySelector('#paperBtn');
 let scissorBtn = document.querySelector('#scissorBtn');
 let newGameBtn = document.querySelector('#newGameBtn');
+// Definerar variabler
+let pScore = 0;
+let cScore = 0;
 // Definerar display för resultat
 let roundResult = document.querySelector('#roundResult');
 let playerScore = document.querySelector('#playerScore');
@@ -48,18 +51,22 @@ rockBtn.addEventListener('click', function () {
     roundResult.textContent = '';
     setTimeout(function() {
         roundResult.textContent = playRound('rock', getComputerChoice());
+        game();
+
     }, 50);
 });
 paperBtn.addEventListener('click', function () {
     roundResult.textContent = '';
     setTimeout(function() {
         roundResult.textContent = playRound('paper', getComputerChoice());
+        game();
     }, 50);
 });
 scissorBtn.addEventListener('click', function () {
     roundResult.textContent = '';
     setTimeout(function() {
         roundResult.textContent = playRound('scissors', getComputerChoice());
+        game();
     }, 50);
 });
 
@@ -73,30 +80,24 @@ function disableButtons() {
 
 // Bäst av 5
 function game() {
-    let pScore = 0;
-    let cScore = 0;
-    let observer = new MutationObserver(function(mutationsList, observer) {
-        for (let mutation of mutationsList) {
-            if (mutation.target.textContent === "YOU WIN!") {
-                pScore++;
-                playerScore.textContent = pScore;
-            } else if (mutation.target.textContent === "YOU LOSE!") {
-                cScore++;
-                compScore.textContent = cScore;
-            }
+    let resultText = roundResult.textContent;
+    if (resultText == "YOU WIN!") {
+        pScore++;
+        playerScore.textContent = pScore;
+    } else if (resultText == "YOU LOSE!") {
+        cScore++;
+        compScore.textContent = cScore;
+    }
 
-            if (pScore === 3) {
-                winner.textContent = "YOU WON!";
-                disableButtons();
-            } else if (cScore === 3) {
-                winner.textContent = "YOU LOST...";
-                disableButtons();
-            } 
-        }
-    });
-    observer.observe(roundResult, { childList: true });
+    if (pScore === 3) {
+        winner.textContent = "YOU WON!";
+        disableButtons();
+    } else if (cScore === 3) {
+        winner.textContent = "YOU LOST...";
+        disableButtons();
+    } 
 }
-game();
+
 
 function resetGame() {
     location.reload();
