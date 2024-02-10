@@ -29,17 +29,17 @@ function getComputerChoice(){
 function playRound(playerSelection, computerSelection){
     let playerHand = playerSelection.toLowerCase();
         if (playerHand == "rock" && computerSelection == "paper"){
-            return"YOU LOSE!";
+            return"You LOST this round!";
         }else if (playerHand == "rock" && computerSelection == "scissors"){
-            return"YOU WIN!";
+            return"You WON this round!";
         }else if (playerHand == "paper" && computerSelection == "rock"){
-            return"YOU WIN!";
+            return"You WON this round!";
         }else if (playerHand == "paper" && computerSelection == "scissors"){
-            return "YOU LOSE!";
+            return "You LOST this round!";
         }else if (playerHand == "scissors" && computerSelection == "rock"){
-            return"YOU LOSE!";
+            return"You LOST this round!";
         }else if (playerHand == "scissors" && computerSelection == "paper"){
-            return"YOU WIN!";
+            return"You WON this round!";
         } else if (playerHand == computerSelection) {
             return "TIE! ...try again!";
         }
@@ -80,10 +80,10 @@ function disableButtons() {
 // Bäst av 5
 function gameOf5() {
     let resultText = roundResult.textContent;
-    if (resultText == "YOU WIN!") {
+    if (resultText == "You WON this round!") {
         pScore++;
         playerScore.textContent = pScore;
-    } else if (resultText == "YOU LOST!") {
+    } else if (resultText == "You LOST this round!") {
         cScore++;
         compScore.textContent = cScore;
     }
