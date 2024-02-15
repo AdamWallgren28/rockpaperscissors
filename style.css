@@ -70,7 +70,9 @@ background-color: peachpuff;
         animation: fontPulse 2s infinite;
     }
     @keyframes fontPulse {
-      50% {font-size: 500%;}       
+        25% {color:white}
+      50% {font-size: 350%; color: black}       
+      75% {color: white;}
     }
 
     #newGameBtn {
