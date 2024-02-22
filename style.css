@@ -1,3 +1,9 @@
+:root {
+    --text-color: black;
+    --acc-color: aquamarine;
+    --bg-color: peachpuff;
+}
+
 body {
     margin: 0;
     display: flex;
@@ -7,7 +13,21 @@ body {
 
 header {
     height: auto;
-    background-color: aquamarine;
+    background-color: var(--acc-color);
+}
+
+p, h1, h1, h2, h3, h4, h5, h6, button {
+    color: var(--text-color);
+}
+a {
+    text-decoration: none;
+    background-color: var(--bg-color);
+    padding: 6px 12px 4px 12px;
+    
+
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 1px;
 }
 
 h1 {
@@ -23,8 +43,8 @@ header, footer, main {
 }
 
 main {
-height: 65vh;
-background-color: peachpuff;
+height: 85vh;
+background-color: var(--bg-color);
 }
   
 
@@ -37,7 +57,8 @@ background-color: peachpuff;
             width: 6rem;
             height: 2rem;
             border-radius: 1rem;
-            background-color: aquamarine;
+            background-color: var(--acc-color);
+            margin-top: 2rem;
             
         }
 
@@ -60,7 +81,7 @@ background-color: peachpuff;
         }
             
     .vinnare {
-        height: 6rem;
+        height: 8rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -71,15 +92,27 @@ background-color: peachpuff;
     }
     @keyframes fontPulse {
         25% {color:white}
-      50% {font-size: 350%; color: black}       
+      50% {font-size: 350%; color: var(--text-color)}       
       75% {color: white;}
     }
 
     #newGameBtn {
-        background-color: peachpuff;
+        background-color: var(--bg-color);
+    }
+    #temaKnapp {
+        width: 6rem;
+            height: 2rem;
+            border-radius: 1rem;
+            background-color: var(--acc-color);
+            margin: 1rem 0rem 2rem;
     }
 
 footer {
     height: 20vh;
-    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--acc-color);
+    padding: 4rem 2rem 6rem 2rem;
 }

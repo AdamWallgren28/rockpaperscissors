@@ -74,7 +74,7 @@ function disableButtons() {
     rockBtn.disabled = true;
     paperBtn.disabled = true;
     scissorBtn.disabled = true;
-    newGameBtn.style.backgroundColor = 'aquamarine';
+    newGameBtn.style.backgroundColor = 'var(--acc-color)';
 }
 
 // Bäst av 5
@@ -102,3 +102,48 @@ function resetGame() {
     location.reload();
 }
 newGameBtn.addEventListener('click', resetGame);
+
+
+////////// Dark Mode 
+
+//Darkmode via knapp
+let onOff = 'on'
+function changeTheme() {
+    let tColor = getComputedStyle(document.documentElement).getPropertyValue('--text-color');
+
+        if (tColor == 'black') {
+            document.documentElement.style.setProperty('--text-color', 'aqua');
+            document.documentElement.style.setProperty('--acc-color', 'black');
+            document.documentElement.style.setProperty('--bg-color', 'grey');
+            document.getElementById('temaKnapp').innerText = 'Light Mode';
+        } else {
+            document.documentElement.style.setProperty('--text-color', 'black');
+            document.documentElement.style.setProperty('--acc-color', 'aquamarine');
+            document.documentElement.style.setProperty('--bg-color', 'peachpuff');
+            document.getElementById('temaKnapp').innerText = 'Dark Mode';
+        }
+        onOff = 'off';
+  }
+
+
+//Darkmode via klocka
+function tidsTema() {
+    if (onOff === 'on'){
+        let timma = (new Date()).getHours();
+
+        if (timma >= 6 && timma < 19) { 
+            document.documentElement.style.setProperty('--text-color', 'black');
+                document.documentElement.style.setProperty('--acc-color', 'aquamarine');
+                document.documentElement.style.setProperty('--bg-color', 'peachpuff');
+                document.getElementById('temaKnapp').innerText = 'Dark Mode';
+        } else { 
+            document.documentElement.style.setProperty('--text-color', 'aqua');
+            document.documentElement.style.setProperty('--acc-color', 'black');
+            document.documentElement.style.setProperty('--bg-color', 'grey');
+            document.getElementById('temaKnapp').innerText = 'Light Mode';
+        }
+    } 
+}
+tidsTema();
+setInterval(tidsTema, 10000); // 10000 milliseconds = 1 minute
+
