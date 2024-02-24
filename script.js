@@ -144,6 +144,5 @@ function tidsTema() {
         }
     } 
 }
-tidsTema();
 setInterval(tidsTema, 10000); // 10000 milliseconds = 1 minute
 

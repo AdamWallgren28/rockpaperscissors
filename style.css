@@ -21,8 +21,7 @@ p, h1, h1, h2, h3, h4, h5, h6, button {
 }
 a {
     text-decoration: none;
-    background-color: var(--bg-color);
-    padding: 6px 12px 4px 12px;
+    
     
 
     border-radius: 6px;
@@ -116,3 +115,30 @@ footer {
     background-color: var(--acc-color);
     padding: 4rem 2rem 6rem 2rem;
 }
+.cvLinks {
+    display: flex;
+    justify-content: flex-start;
+    
+}
+    .cvLinks a {
+        color: black;
+        height: 2.5rem;
+        min-width: 2.5rem;
+        margin-right: 1rem;
+        background-color: var(--bg-color);
+        border-radius: 3rem;
+        border-style: solid;
+        border-radius: 1rem;
+        border-color: var(--text-color);
+        border-width: 1px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+        .cvLinks a:nth-child(1){
+    padding: 0 0.5rem;
+        }
+        .cvLinkImg {
+            width: 2rem;
+        }
