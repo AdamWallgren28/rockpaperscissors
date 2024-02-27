@@ -15,26 +15,20 @@ header {
     height: auto;
     background-color: var(--acc-color);
 }
-
 p, h1, h1, h2, h3, h4, h5, h6, button {
     color: var(--text-color);
 }
 a {
     text-decoration: none;
-    
-    
-
     border-radius: 6px;
     border-style: solid;
     border-width: 1px;
 }
-
 h1 {
     margin: 16px;
 } 
 
 header, footer, main {
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,16 +36,12 @@ header, footer, main {
 }
 
 main {
-height: 85vh;
-background-color: var(--bg-color);
+    height: 85vh;
+    background-color: var(--bg-color);
 }
-  
-
     .roundGrid {
-        height: 10vh;
-       
+        height: 10vh; 
     }
-
         #rockBtn, #paperBtn, #scissorBtn, #newGameBtn {
             width: 6rem;
             height: 2rem;
@@ -60,7 +50,7 @@ background-color: var(--bg-color);
             margin-top: 2rem;
             
         }
-
+        
     .scoreBoard, .knappBox {
         width: 20rem;
         display: flex;
@@ -69,31 +59,28 @@ background-color: var(--bg-color);
         .player, .score, .computer {
             width: 15vh;
             display: flex;
-    justify-content: center;
-    align-items: center;
+            justify-content: center;
+            align-items: center;
         }
-
         .score {
             justify-content: space-evenly;
             font-size: 28px;
-            
-        }
-            
+        } 
+
     .vinnare {
         height: 8rem;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-
-    #winner {
-        animation: fontPulse 2s infinite;
-    }
-    @keyframes fontPulse {
-        25% {color:white}
-      50% {font-size: 350%; color: var(--text-color)}       
-      75% {color: white;}
-    }
+        #winner {
+            animation: fontPulse 2s infinite;
+        }
+        @keyframes fontPulse {
+            25% {color:white}
+            50% {font-size: 350%; color: var(--text-color)}       
+            75% {color: white;}
+        }
 
     #newGameBtn {
         background-color: var(--bg-color);
@@ -115,30 +102,30 @@ footer {
     background-color: var(--acc-color);
     padding: 4rem 2rem 6rem 2rem;
 }
-.cvLinks {
-    display: flex;
-    justify-content: flex-start;
-    
-}
-    .cvLinks a {
-        color: black;
-        height: 2.5rem;
-        min-width: 2.5rem;
-        margin-right: 1rem;
-        background-color: var(--bg-color);
-        border-radius: 3rem;
-        border-style: solid;
-        border-radius: 1rem;
-        border-color: var(--text-color);
-        border-width: 1px;
+    .cvLinks {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        
+        justify-content: flex-start;  
     }
-        .cvLinks a:nth-child(1){
-    padding: 0 0.5rem;
+        .cvLinks a {
+            font-weight: 600;        
+            color: black;
+            height: 2.5rem;
+            min-width: 2.5rem;
+            margin-right: 1rem;
+            background-color: var(--bg-color);
+            border-radius: 3rem;
+            border-style: solid;
+            border-radius: 1rem;
+            border-color: var(--text-color);
+            border-width: 1px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
         }
-        .cvLinkImg {
-            width: 2rem;
-        }
+            .cvLinks a:nth-child(1){
+                padding: 0 0.5rem;
+            }
+            .cvLinkImg {
+                width: 2rem;
+            }
