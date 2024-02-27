@@ -10,23 +10,23 @@ body {
     flex-direction: column;
     font-family:'Courier New', Courier, monospace ;
 }
+    p, h1, h1, h2, h3, h4, h5, h6, button {
+        color: var(--text-color);
+    }
+    h1 {
+        margin: 16px;
+    } 
+    a {
+        text-decoration: none;
+        border-radius: 6px;
+        border-style: solid;
+        border-width: 1px;
+    }
 
 header {
     height: auto;
     background-color: var(--acc-color);
 }
-p, h1, h1, h2, h3, h4, h5, h6, button {
-    color: var(--text-color);
-}
-a {
-    text-decoration: none;
-    border-radius: 6px;
-    border-style: solid;
-    border-width: 1px;
-}
-h1 {
-    margin: 16px;
-} 
 
 header, footer, main {
     display: flex;
@@ -39,6 +39,7 @@ main {
     height: 85vh;
     background-color: var(--bg-color);
 }
+    /* div för omgångsresultat*/
     .roundGrid {
         height: 10vh; 
     }
