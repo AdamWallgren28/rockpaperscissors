@@ -91,9 +91,15 @@ function gameOf5() {
     if (pScore === 3) {
         winner.textContent = "YOU WON!";
         disableButtons();
+        rockBtn.style.backgroundColor = 'var(--bg-color)';
+        paperBtn.style.backgroundColor = 'var(--bg-color)';
+        scissorBtn.style.backgroundColor = 'var(--bg-color)';
     } else if (cScore === 3) {
         winner.textContent = "YOU LOST!";
         disableButtons();
+        rockBtn.style.backgroundColor = 'var(--bg-color)';
+        paperBtn.style.backgroundColor = 'var(--bg-color)';
+        scissorBtn.style.backgroundColor = 'var(--bg-color)';        
     } 
 }
 

@@ -48,9 +48,9 @@ main {
             border-radius: 1rem;
             background-color: var(--acc-color);
             margin-top: 2rem;
-            
+            border-color: darkgrey black black darkgrey;
         }
-        
+
     .scoreBoard, .knappBox {
         width: 20rem;
         display: flex;
